@@ -7,11 +7,11 @@ package;
 import haxegon.*;
 class Controls 
 {
-	private static var left = Text.LEFT;
-	private static var right = Text.RIGHT;
-	private static var center = Text.CENTER;
-	private static var bottom = Text.BOTTOM;
-	private static var top = Text.TOP;
+	public var left = Text.LEFT;
+	public var right = Text.RIGHT;
+	public var center = Text.CENTER;
+	public var bottom = Text.BOTTOM;
+	public var top = Text.TOP;
 	
 	private function init() {}
 	private function update() {
@@ -25,3 +25,4 @@ class Controls
 	}
 	
 }
+
