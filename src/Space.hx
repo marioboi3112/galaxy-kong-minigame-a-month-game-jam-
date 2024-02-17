@@ -5,7 +5,7 @@ package;
  * @author obi3112
  */
 import haxegon.*;
-
+import SelectLevel;
 class Space {
 	//Create some arrays for the starfield.
 	var star_x:Array<Int>;
@@ -49,7 +49,7 @@ class Space {
 		}
 		
 		Text.size = 2;
-		Text.align = Text.LEFT;
 		Text.display(Text.CENTER, Text.CENTER, "GALAXY KONG!", Col.GRAY);
-	 }
+		Text.display(Text.CENTER, Text.CENTER, "PRESS X TO PLAY", Col.WHITE);	
+	}
 }

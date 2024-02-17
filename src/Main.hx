@@ -5,6 +5,8 @@ package;
  * @author obi3112
  */
 import haxegon.*;
+import Space;
+import SelectLevel;
 class Main 
 {
 	public final SCREEN_WIDTH = Gfx.screenwidth;
@@ -52,5 +54,9 @@ class Main
 	private function update() {
 		//meteorTest();
 		Scene.change(Space);
+		if (Input.pressed(Key.X)) {
+			Scene.change(SelectLevel);
+		}
+		
 	}
 }
