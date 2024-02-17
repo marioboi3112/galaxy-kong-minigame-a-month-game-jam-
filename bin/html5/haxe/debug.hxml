@@ -2,13 +2,11 @@
 --macro lime._internal.macros.DefineMacro.run()
 -cp C:/HaxeToolkit/haxe/lib/lime/8,1,1/src
 -D lime=8.1.1
--cp C:/HaxeToolkit/haxe/lib/haxegon/git
+-cp C:/HaxeToolkit/haxe/lib/haxegon/0,13,0
 -D haxegon=0.13.0
 --macro openfl.utils._internal.ExtraParamsMacro.include()
 -cp C:/HaxeToolkit/haxe/lib/openfl/9,3,2/src
 -D openfl=9.3.2
--cp C:/HaxeToolkit/haxe/lib/starling/git/src
--D starling=2.7.1
 -cp src
 -cp plugins
 -D tools=8.1.1
@@ -22,6 +20,7 @@
 -D lime-howlerjs
 -D lime-html5
 -D windowwidth=800
+-D fdb
 -D html5
 -D web
 --remap flash:openfl

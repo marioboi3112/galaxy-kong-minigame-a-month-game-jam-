@@ -57,14 +57,23 @@ class Space {
 		Text.size = 2;
 		Text.display(Text.CENTER, Text.CENTER, "GALAXY KONG!", Col.GRAY);
 		Text.display(Text.CENTER, Text.CENTER - 30, "PRESS X TO PLAY", Col.WHITE);	
-		play();
+		controls();
 
 	}
-	var play_text_x:Int = 60;
-	var play_text_y:Int = Gfx.screenheight - 100;
-	private function play() {
-		customButton(play_text_x, play_text_y, 140, 40, Col.RED); //control button
-		Text.display(play_text_x + 15, play_text_y + 10, "CONTROLS");
+	var controls_text_x:Int = 60;
+	var controls_text_y:Int = Gfx.screenheight - 100;
+	private function controls() {
+		customButton(controls_text_x, controls_text_y, 140, 40, Col.RED); //control button
+		Text.display(controls_text_x + 15, controls_text_y + 10, "CONTROLS");
+		//mouse clicking logic
+		for (i in controls_text_x ... controls_text_x + 140) {
+			for (j in controls_text_y ... controls_text_y + 40)
+			if (Mouse.x == i && Mouse.y == j && Mouse.leftclick()) {
+				trace("GAME STATE: CONTROLS");
+				Scene.change(Controls);
+			}
+		}
+		
 	}
 	
 	

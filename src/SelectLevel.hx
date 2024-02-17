@@ -9,8 +9,12 @@ class SelectLevel {
 	}
 	
   function update() {
-		if (Gui.button("level1")) {
-			trace("LEVEL 1 HAS STARTED");
-		}	
+		for (y in 0 ... 10) {
+			for (x in 0 ... 10) {
+				Gui.button("lel");
+				Gui.shift();
+				Gui.button('meow');
+			} 
+		}
 	}
 }

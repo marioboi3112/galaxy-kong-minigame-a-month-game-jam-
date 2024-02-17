@@ -73,7 +73,7 @@ import sys.FileSystem;
 
 		var data, manifest, library, bundle;
 
-		data = '{"name":null,"assets":"aoy4:pathy28:data%2Fgraphics%2Fmeteor.pngy4:sizei150y4:typey5:IMAGEy2:idR1y7:preloadtgoR0y29:data%2Fgraphics%2Fmeteor2.pngR2i319R3R4R5R7R6tgoR0y29:data%2Fgraphics%2Ftilemap.pngR2i2173R3R4R5R8R6tgoR0y34:data%2Fhow%20to%20add%20assets.txtR2i6838R3y4:TEXTR5R9R6tgoR0y15:data%2Ficon.pngR2i143966R3R4R5R11R6tgh","rootPath":null,"version":2,"libraryArgs":[],"libraryType":null}';
+		data = '{"name":null,"assets":"aoy4:pathy27:data%2Fgraphics%2Fearth.pngy4:sizei56346y4:typey5:IMAGEy2:idR1y7:preloadtgoR0y28:data%2Fgraphics%2Fmeteor.pngR2i150R3R4R5R7R6tgoR0y29:data%2Fgraphics%2Fmeteor2.pngR2i319R3R4R5R8R6tgoR0y29:data%2Fgraphics%2Ftilemap.pngR2i2173R3R4R5R9R6tgoR0y34:data%2Fhow%20to%20add%20assets.txtR2i6838R3y4:TEXTR5R10R6tgoR0y15:data%2Ficon.pngR2i143966R3R4R5R12R6tgoR2i9830444R3y5:SOUNDR5y30:data%2Fsounds%2Ftitle_song.wavy9:pathGroupaR14hR6tgh","rootPath":null,"version":2,"libraryArgs":[],"libraryType":null}';
 		manifest = AssetManifest.parse (data, rootPath);
 		library = AssetLibrary.fromManifest (manifest);
 		Assets.registerLibrary ("default", library);
@@ -92,21 +92,25 @@ import sys.FileSystem;
 #if !display
 #if flash
 
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__data_graphics_earth_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__data_graphics_meteor_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__data_graphics_meteor2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__data_graphics_tilemap_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__data_how_to_add_assets_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__data_icon_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__data_sounds_title_song_wav extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__manifest_default_json extends null { }
 
 
 #elseif (desktop || cpp)
 
+@:keep @:image("data/graphics/earth.png") @:noCompletion #if display private #end class __ASSET__data_graphics_earth_png extends lime.graphics.Image {}
 @:keep @:image("data/graphics/meteor.png") @:noCompletion #if display private #end class __ASSET__data_graphics_meteor_png extends lime.graphics.Image {}
 @:keep @:image("data/graphics/meteor2.png") @:noCompletion #if display private #end class __ASSET__data_graphics_meteor2_png extends lime.graphics.Image {}
 @:keep @:image("data/graphics/tilemap.png") @:noCompletion #if display private #end class __ASSET__data_graphics_tilemap_png extends lime.graphics.Image {}
 @:keep @:file("data/how to add assets.txt") @:noCompletion #if display private #end class __ASSET__data_how_to_add_assets_txt extends haxe.io.Bytes {}
 @:keep @:image("data/icon.png") @:noCompletion #if display private #end class __ASSET__data_icon_png extends lime.graphics.Image {}
+@:keep @:file("data/sounds/title_song.wav") @:noCompletion #if display private #end class __ASSET__data_sounds_title_song_wav extends haxe.io.Bytes {}
 @:keep @:file("") @:noCompletion #if display private #end class __ASSET__manifest_default_json extends haxe.io.Bytes {}
 
 
