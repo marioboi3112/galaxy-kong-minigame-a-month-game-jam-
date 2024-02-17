@@ -1,6 +1,5 @@
 import haxegon.*;
-
-class Main {
+class SelectLevel {
 	function init(){
 		//Use the entire screen
 		Gfx.resizescreen(0, 0);
@@ -10,16 +9,8 @@ class Main {
 	}
 	
   function update() {
-	  if (Gui.button("quack")){
-			Sound.play("quack");
-		}
-		
-		if (Gui.button("meow")){
-			Sound.play("meow");
-		}
-		
-		if (Gui.button("woof")){
-			Sound.play("woof");
-		}
+		if (Gui.button("level1")) {
+			trace("LEVEL 1 HAS STARTED");
+		}	
 	}
 }

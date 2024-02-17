@@ -35,10 +35,10 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "2";
+		app.meta["build"] = "3";
 		app.meta["company"] = "Your name here";
 		app.meta["file"] = "newproject";
-		app.meta["name"] = "New Project";
+		app.meta["name"] = "Galaxy Kong!";
 		app.meta["packageName"] = "com.yournamehere.newproject";
 		app.meta["version"] = "1.0.0";
 
@@ -60,7 +60,7 @@ class ApplicationMain
 			minimized: false,
 			parameters: {},
 			resizable: true,
-			title: "New Project",
+			title: "Galaxy Kong!",
 			width: 800,
 			x: null,
 			y: null,
@@ -102,7 +102,7 @@ class ApplicationMain
 		app.createWindow(attributes);
 		
 		#elseif air
-		app.window.title = "New Project";
+		app.window.title = "Galaxy Kong!";
 		#else
 		app.window.context.attributes.background = 0;
 		app.window.frameRate = 60;

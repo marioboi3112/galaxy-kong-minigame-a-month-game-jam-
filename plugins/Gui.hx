@@ -2,7 +2,6 @@
 import haxegon.*;
 import starling.display.Image;
 import starling.textures.RenderTexture;
-
 private class GuiPrintCache{
 	public function new(){
 		volatile = false;

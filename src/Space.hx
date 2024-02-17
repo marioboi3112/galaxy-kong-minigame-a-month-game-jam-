@@ -6,20 +6,24 @@ package;
  */
 import haxegon.*;
 import SelectLevel;
+
+//NOTE! THIS IS THE MENU CLASS!, idk why i called it space lol
 class Space {
 	//Create some arrays for the starfield.
 	var star_x:Array<Int>;
 	var star_y:Array<Int>;
 	var star_speed:Array<Int>;
-	
+	var earth_y:Int;
+	var earth_x:Int;
 	function init() {
 		//Initalise the arrays, and put some default values in them.
-		star_x = []; star_y = []; star_speed = [];
 		
+		star_x = []; star_y = []; star_speed = [];
+		earth_y = 10; earth_x = 50;
 		for (i in 0 ... 50) {
 			star_x.push(Random.int(0, Gfx.screenwidth));  //Random x position on screen
 			star_y.push(Random.int(0, Gfx.screenheight)); //Random y position on screen
-			star_speed.push(Random.int(8, 16));    //Random speed between 8/16 pixels per frame
+			star_speed.push(Random.int(4, 8));    //Random speed between 8/16 pixels per frame
 		}
 	}
 	
@@ -47,9 +51,24 @@ class Space {
 				star_speed[i] = Random.int(8, 16);
 			}
 		}
-		
+		//render our earth(planet) to screen
+		Gfx.rotation(23, Gfx.CENTER, Gfx.CENTER);
+		Gfx.drawimage(earth_x, earth_y, "earth");
 		Text.size = 2;
 		Text.display(Text.CENTER, Text.CENTER, "GALAXY KONG!", Col.GRAY);
-		Text.display(Text.CENTER, Text.CENTER, "PRESS X TO PLAY", Col.WHITE);	
+		Text.display(Text.CENTER, Text.CENTER - 30, "PRESS X TO PLAY", Col.WHITE);	
+		play();
+
+	}
+	var play_text_x:Int = 60;
+	var play_text_y:Int = Gfx.screenheight - 100;
+	private function play() {
+		customButton(play_text_x, play_text_y, 140, 40, Col.RED); //control button
+		Text.display(play_text_x + 15, play_text_y + 10, "CONTROLS");
+	}
+	
+	
+	private function customButton(x,y,width,height,col) {
+		Gfx.drawbox(x,y,width,height,col);
 	}
 }
