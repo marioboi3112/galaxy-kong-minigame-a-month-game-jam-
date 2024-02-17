@@ -5,7 +5,6 @@ package;
  * @author obi3112
  */
 import haxegon.*;
-import SelectLevel;
 
 //NOTE! THIS IS THE MENU CLASS!, idk why i called it space lol
 class Space {
@@ -66,16 +65,23 @@ class Space {
 		customButton(controls_text_x, controls_text_y, 140, 40, Col.RED); //control button
 		Text.display(controls_text_x + 15, controls_text_y + 10, "CONTROLS");
 		//mouse clicking logic
-		for (i in controls_text_x ... controls_text_x + 140) {
-			for (j in controls_text_y ... controls_text_y + 40)
-			if (Mouse.x == i && Mouse.y == j && Mouse.leftclick()) {
-				trace("GAME STATE: CONTROLS");
-				Scene.change(Controls);
-			}
-		}
+	clickButton(controls_text_x, controls_text_y, 140, 40, "CONTROLS", Controls);
 		
 	}
 	
+	private static function clickButton(x, y, w, h, str:String, scene) {
+		for (i in x ... x + w) {
+			for (j in y ... y + h)
+			if (Mouse.x == i && Mouse.y == j && Mouse.leftclick()) {
+				trace(str);
+				Scene.change(scene);
+			}
+		}
+	}
+	
+	private function credits() {
+		
+	}
 	
 	private function customButton(x,y,width,height,col) {
 		Gfx.drawbox(x,y,width,height,col);
