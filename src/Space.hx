@@ -68,9 +68,8 @@ class Space {
 	private function controls() {
 		Btn.customButton(controls_text_x, controls_text_y, 140, 40, Col.RED); //control button
 		Text.display(controls_text_x + 15, controls_text_y + 10, "CONTROLS");
-		//mouse clicking logic
+		//mouse clicking l ogic
 		Btn.clickButton(controls_text_x, controls_text_y, 140, 40, "CONTROLS", Controls); //call the function on the controls button
-		
 	}
 	
 	//credits section
@@ -80,7 +79,7 @@ class Space {
 	private function credits() {
 		Btn.customButton(credits_x, credits_y, 140, 40, Col.RED);
 		Text.display(credits_x + 15, credits_y + 10, "CREDITS");
-		Btn.clickButton(credits_x, credits_y, 140, 40, "CREDITS", Credits);
+		Btn.clickButton(credits_x, credits_y, 140,40,"CREDITS", Credits);
 	}
 	
 	

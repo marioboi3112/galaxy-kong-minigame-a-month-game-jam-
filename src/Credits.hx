@@ -6,14 +6,14 @@ package;
  */
 import haxegon.*;
 
-class Credits extends Controls{
+class Credits{
 	
-	override function init() {
+	private function init() {
 	}
-	override function update() {
+	private function update() {
 		Text.size = 3;
-		Text.display(center, 0, "CREDITS PROTOTYPE");
+		Text.display(Text.CENTER, 0, "CREDITS");
 		Text.size = 2;
-		Text.display(left, center, "CODING/MUSIC/ART: obi3112 (all by me)");
+		Text.display(Text.LEFT, Text.CENTER, "CODING/MUSIC/ART: obi3112 (all by me)");
 	}
 }

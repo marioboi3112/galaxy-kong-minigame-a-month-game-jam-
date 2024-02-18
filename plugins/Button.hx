@@ -4,6 +4,10 @@ package;
  * ...
  * @author obi3112
  */
+
+ 
+//THIS IS MY OWN PLUGIN
+//NOT FROM HAXEGON :)
 import haxegon.*;
 class Button 
 {
@@ -25,5 +29,4 @@ class Button
 	public function customButton(x,y,width,height,col) {
 		Gfx.drawbox(x,y,width,height,col);
 	}
-	
 }

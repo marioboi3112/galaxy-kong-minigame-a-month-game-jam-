@@ -5,8 +5,9 @@ package;
  * @author obi3112
  */
 import haxegon.*;
-class Controls 
-{
+class Controls {
+	//instances
+	private static var btn:Button = new Button();
 	public var left = Text.LEFT;
 	public var right = Text.RIGHT;
 	public var center = Text.CENTER;
@@ -18,10 +19,10 @@ class Controls
 		Text.size = 4;
 		Text.display(center, 0, "CONTROLS");
 		//draw a line below the CONTROLS title
-		Gfx.drawline(0, 22, Gfx.screenwidth+22, 0,Col.RED,0.5);
+		Gfx.drawline(0, 22, Gfx.screenwidth, 22,Col.RED,0);
 		
 		Text.size = 2;
-		Text.display(left, left + 40, "MOVE PLAYER: UP ARROW");
+		Text.display(left, left + 40, "You can move the player by using the LEFT and RIGHT arrows\n to move left and right respectively,");	
 	}
 	
 }
