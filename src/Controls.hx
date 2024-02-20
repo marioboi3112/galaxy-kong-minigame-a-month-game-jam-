@@ -8,12 +8,13 @@ import haxegon.*;
 class Controls {
 	//instances
 	private static var btn:Button = new Button();
-	public var left = Text.LEFT;
-	public var right = Text.RIGHT;
-	public var center = Text.CENTER;
-	public var bottom = Text.BOTTOM;
-	public var top = Text.TOP;
-	
+	public static var left = Text.LEFT;
+	public static var right = Text.RIGHT;
+	public static var center = Text.CENTER;
+	public static var bottom = Text.BOTTOM;
+	public static var top = Text.TOP;
+	var backBtn_x = 60+400;
+	var backBtn_y = Gfx.screenheight - 100;
 	private function init() {}
 	private function update() {
 		Text.size = 4;
@@ -23,6 +24,17 @@ class Controls {
 		
 		Text.size = 2;
 		Text.display(left, left + 40, "You can move the player by using the LEFT and RIGHT arrows\n to move left and right respectively,");	
+		//make the back button for the controls section
+		backButton();
+		
+	}
+	
+	//back button
+	
+	private function backButton() {
+		Text.display(backBtn_x + 15, backBtn_y + 15, "BACK");
+		btn.customButton(backBtn_x, backBtn_y, 100, 40, Col.RED);
+		btn.clickButton(backBtn_x, backBtn_y, 100,40,"space", Space);
 	}
 	
 }

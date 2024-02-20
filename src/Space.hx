@@ -5,7 +5,7 @@ package;
  * @author obi3112
  */
 import haxegon.*;
-
+import game.Game;
 //NOTE! THIS IS THE MENU CLASS!, idk why i called it space lol
 class Space {
 	//instances
@@ -30,8 +30,11 @@ class Space {
 	}
 	
 	function update() {
-		//Change scene when you click the mouse.
-			
+		//change scene to game when X is pressed.
+		if (Input.pressed(Key.X))
+		{
+			Scene.change(Game);
+		}
 		//Starfield
 		Gfx.clearscreen();
 		

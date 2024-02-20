@@ -1,15 +1,16 @@
-package;
+package game;
 
 /**
  * ...
  * @author obi3112
  */
+import haxegon.*;
 class Game 
 {
-private var image_array:Array<String> = [
+	public final SCREEN_WIDTH:Int = Gfx.screenwidth;
+	public final SCREEN_HEIGHT:Int = Gfx.screenheight;
+	private var image_array:Array<String> = [
 		"meteor2", //0
-
-	
 	];	//array consisting of the images we need to use	
 	// var meteor = Gfx.drawimage();
 	private static var struct = {
@@ -43,8 +44,7 @@ private var image_array:Array<String> = [
 	
 	
 	private function update() {
-		//meteorTest();
-		Scene.change(Space);
+		meteorTest();
 		
 	}
 	
