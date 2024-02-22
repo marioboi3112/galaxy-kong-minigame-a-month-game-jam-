@@ -33,7 +33,7 @@ class Space {
 		//change scene to game when X is pressed.
 		if (Input.pressed(Key.X))
 		{
-			Scene.change(Game);
+			Scene.change(IntroScene);
 		}
 		//Starfield
 		Gfx.clearscreen();

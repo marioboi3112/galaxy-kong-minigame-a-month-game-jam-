@@ -14,7 +14,7 @@ class Button
 
 	public function new() {} //empty constructor
 	
-	public function clickButton(x, y, w, h, str:String, scene:Dynamic) {
+	public function clickButton(x, y, w, h, str:String, scene:Class<Dynamic>) {
 		for (i in x ... x + w) {
 			for (j in y ... y + h) {
 				if (Mouse.x == i && Mouse.y == j && Mouse.leftclick()) {

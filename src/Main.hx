@@ -9,8 +9,8 @@ import Space;
 
 class Main
 {
-	public static final SCREEN_WIDTH = Gfx.screenwidth;
-	public static final SCREEN_HEIGHT = Gfx.screenheight;
+	public final SCREEN_WIDTH = Gfx.screenwidth;
+	public final SCREEN_HEIGHT = Gfx.screenheight;
 	
 	
 	//TITLE SCREEN

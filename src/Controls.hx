@@ -4,6 +4,7 @@ package;
  * ...
  * @author obi3112
  */
+
 import haxegon.*;
 class Controls {
 	//instances
@@ -23,7 +24,7 @@ class Controls {
 		Gfx.drawline(0, 22, Gfx.screenwidth, 22,Col.RED,0);
 		
 		Text.size = 2;
-		Text.display(left, left + 40, "You can move the player by using the LEFT and RIGHT arrows\n to move left and right respectively,");	
+		Text.display(left, left + 40, "You can move the player by using:- \n - LEFT ARROW: MOVE LEFT \n \n RIGHT ARROW: MOVE RIGHT \n \n UP ARROW: MOVE PLAYER UP ON LADDERS");	
 		//make the back button for the controls section
 		backButton();
 		
