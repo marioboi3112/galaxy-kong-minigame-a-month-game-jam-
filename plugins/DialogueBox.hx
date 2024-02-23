@@ -16,6 +16,7 @@ class DialogueBox
 	{
 		
 	}
+	
 	public function createDialogueBox(x,y,w,h,col)
 	{
 		Gfx.fillbox(x,y,w,h,col);
@@ -27,4 +28,6 @@ class DialogueBox
 		Text.display(x, y, str, col);
 		
 	}
+	
+	
 }

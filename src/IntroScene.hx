@@ -12,23 +12,46 @@ class IntroScene
 {
 	//instances
 	var dialogueBox:DialogueBox = new DialogueBox();
-	var i = 0;
+	//variables
+	var x:Int;
+	var y:Int;
+	var w:Int;
+	var h:Int;
+	var col:Dynamic;
 	var diagTextArr:Array<String> = [
 		"TEXT 1",
 		"TEXT 2",
 	];
+	var scale:Int = 2;
+	//functions
+	function init()
+	{
+		x = 0;
+		y = Gfx.screenheight - 50;
+		w = Gfx.screenwidth;
+		h = 50;
+		col = Col.RED;
+	}
 	
 	function update() 
 	{
-		dialogueBox.createDialogueBox(0, Gfx.screenheight - 50, Gfx.screenwidth, 50, Col.RED);
-		if (Input.pressed(Key.Z)) 
+		dialogueBox.createDialogueBox(x,y,w,h,col);
+		var i = 0;
+		if (Input.justpressed(Key.Z)) 
 		{
 			i++;
 			if (i >= diagTextArr.length) {
-				i = diagTextArr.length - 1; // Reset index to loop back to the beginning
+				 // Reset index to loop back to the beginning
+				 w = h = 0;
+				 diagTextArr[i] = "";
 			}
 		}
-		dialogueBox.insertText(0,Gfx.screenheight-50,diagTextArr[i],2, Col.GREEN);
+
+		dialogueBox.insertText(0,Gfx.screenheight-50,diagTextArr[i],scale, Col.GREEN);
+		
+		
+	Gfx.drawimage(x,y+5, "comrade");
+	
 	}
 	
 }
