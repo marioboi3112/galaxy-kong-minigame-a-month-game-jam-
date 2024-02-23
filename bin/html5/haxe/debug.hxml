@@ -20,7 +20,6 @@
 -D lime-howlerjs
 -D lime-html5
 -D windowwidth=800
--D fdb
 -D html5
 -D web
 --remap flash:openfl

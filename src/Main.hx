@@ -18,7 +18,10 @@ class Main
 	private function init() {}
 	//wait for some time for title screen then load menu
 	private function update() {
+	
+		Core.showstats = true;
 		Scene.change(Space);
+		
 	}
 	
 }

@@ -12,11 +12,23 @@ class IntroScene
 {
 	//instances
 	var dialogueBox:DialogueBox = new DialogueBox();
-	
+	var i = 0;
+	var diagTextArr:Array<String> = [
+		"TEXT 1",
+		"TEXT 2",
+	];
 	
 	function update() 
 	{
 		dialogueBox.createDialogueBox(0, Gfx.screenheight - 50, Gfx.screenwidth, 50, Col.RED);
-		dialogueBox.insertText(0,Gfx.screenheight-50,"THIS IS A DIALOGUE TEST",1, Col.WHITE);
+		if (Input.pressed(Key.Z)) 
+		{
+			i++;
+			if (i >= diagTextArr.length) {
+				i = diagTextArr.length - 1; // Reset index to loop back to the beginning
+			}
+		}
+		dialogueBox.insertText(0,Gfx.screenheight-50,diagTextArr[i],2, Col.GREEN);
 	}
+	
 }

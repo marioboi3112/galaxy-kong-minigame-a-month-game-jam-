@@ -5,6 +5,7 @@ package;
  * @author obi3112
  */
 import haxegon.*;
+
 class DialogueBox 
 {
 
@@ -19,16 +20,11 @@ class DialogueBox
 	{
 		Gfx.fillbox(x,y,w,h,col);
 	}
-	
-	public function insertText(x,y,str:String,scale:Int,col, ?font)
+
+	public function insertText(x,y,str:String,scale:Int,col)
 	{
 		Text.size = scale;
-	
-		if (font != null)
-			Text.font = font;
-	
-		Text.display(x, y, str,col);
+		Text.display(x, y, str, col);
 		
 	}
-	
 }
