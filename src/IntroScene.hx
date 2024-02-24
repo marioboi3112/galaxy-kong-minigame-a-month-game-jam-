@@ -50,7 +50,7 @@ class IntroScene
 		dialogueBox.insertText(0,Gfx.screenheight-50,diagTextArr[i],scale, Col.GREEN);
 		
 		
-	Gfx.drawimage(x,y+5, "comrade");
+	Gfx.drawimage(x,y, "comrade");
 	
 	}
 	
