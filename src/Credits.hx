@@ -26,6 +26,6 @@ class Credits{
 	private function backButton() {
 		Text.display(backBtn_x + 15, backBtn_y + 15, "BACK");
 		btn.customButton(backBtn_x, backBtn_y, 100, 40, Col.RED);
-		btn.clickButton(backBtn_x, backBtn_y, 100,40,"space", Space);
+		btn.clickButton(backBtn_x, backBtn_y, 100,40,"SPACE", Space);
 	}
 }

@@ -19,6 +19,7 @@ class Button
 			for (j in y ... y + h) {
 				if (Mouse.x == i && Mouse.y == j && Mouse.leftclick()) {
 						trace(str);
+						Sound.play("select");
 						Scene.change(scene);
 				}
 			}
