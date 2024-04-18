@@ -6,7 +6,9 @@ package game;
  */
 import haxegon.*;
 class Ladder
+
 {
+	
 	public static var ladderAuthorized:Bool = false;
 	public function new()
 	{
@@ -16,10 +18,11 @@ class Ladder
 	{
 		Gfx.loadimage('ladder');
 	}
+	
 	public function createLadder(x,y)
 	{
 		Gfx.scale(4, 4, Gfx.CENTER, Gfx.CENTER);
-		Gfx.rotation(0);
+		Gfx.rotation(0); //rotate image at 0 degrees. (static)
 		Gfx.drawimage(x,y,"ladder");
 	}
 	
@@ -28,7 +31,7 @@ class Ladder
 		if (ladder_x - x <= 10 && ladder_y - y <= 10)
 		{
 			Text.display(ladder_x - 20, ladder_y -10, "PRESS UP ARROW", Col.WHITE);
-			ladderAuthorized = true;	
+			ladderAuthorized = true;
 		}
         else {
             ladderAuthorized = false;

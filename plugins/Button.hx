@@ -29,4 +29,7 @@ class Button
 	public function customButton(x,y,width,height,col) {
 		Gfx.drawbox(x,y,width,height,col);
 	}
+	public function customButtonFilled(x,y,width,height,col) {
+		Gfx.fillbox(x,y,width,height,col);
+	}
 }

@@ -31,13 +31,16 @@ class Space
 			star_speed.push(Random.int(4, 8));    //Random speed between 8/16 pixels per frame
 		}
 	}
+	
 
 	function update()
 	{
+
+		//play the menu music
+
 		//change scene to game when X is pressed.
 		if (Input.pressed(Key.X))
-		{
-
+		{	
 			Scene.change(IntroScene);
 		}
 		//Starfield
@@ -77,7 +80,7 @@ class Space
 
 	}
 	var controls_text_x:Int = 60;
-	var controls_text_y:Int = Gfx.screenheight - 100;
+	var controls_text_y:Int = 600 - 100;
 	private function controls()
 	{
 		Btn.customButton(controls_text_x, controls_text_y, 140, 40, Col.RED); //control button
@@ -87,14 +90,22 @@ class Space
 	}
 
 	//credits section
-	var credits_x = 60+200;
-	var credits_y = Gfx.screenheight - 100;
+	static var credits_x = 60+200;
+	static var credits_y = 800 - 100;
 
 	private function credits()
 	{
 		Btn.customButton(credits_x, credits_y, 140, 40, Col.RED);
 		Text.display(credits_x + 15, credits_y + 10, "CREDITS");
 		Btn.clickButton(credits_x, credits_y, 140,40,"CREDITS", Credits);
+	}
+	//settings section
+	var settings_x = credits_x + 50;
+	var settings_y = credits_y;
+	private function settings()
+	{
+		Btn.customButtonFilled(settings_x, settings_y, 140, 40, Col.RED);
+		Btn.clickButton(settings_x, settings_y, 140,40,"SETTINGS",Settings);
 	}
 
 }
